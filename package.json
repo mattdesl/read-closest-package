@@ -1,0 +1,44 @@
+{
+  "name": "read-closest-package",
+  "version": "1.0.0",
+  "description": "reads the closest package.json file",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "closest-package": "^1.0.0",
+    "read-json": "^0.1.0"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "simple",
+    "package.json",
+    "package",
+    "json",
+    "read",
+    "closest",
+    "closest-package",
+    "packages",
+    "module",
+    "modules",
+    "npm",
+    "dir"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/read-closest-package.git"
+  },
+  "homepage": "https://github.com/mattdesl/read-closest-package",
+  "bugs": {
+    "url": "https://github.com/mattdesl/read-closest-package/issues"
+  }
+}
