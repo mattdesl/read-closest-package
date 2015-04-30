@@ -29,7 +29,7 @@ if (pkg)
 
 Looks for the closest package and calls the callback `cb` with `(err, data)`.
 
-- `cwd` the working directory to search up from for the package.json
+- `cwd` the working directory to search up from for the package.json (defaults to `process.cwd()`)
 - `filter` a filter passed to [closest-package](https://github.com/hughsk/closest-package/)
 
 If there was an error finding the pacakge or parsing JSON, `err` will be non-null.
