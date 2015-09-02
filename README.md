@@ -38,6 +38,13 @@ If there was an error finding the pacakge or parsing JSON, `err` will be non-nul
 
 The same as above, but synchronous. Returns null on any errors.
 
+## See Also
+
+- [pkg-dir](https://github.com/sindresorhus/pkg-dir)
+- [closest-package](https://github.com/hughsk/closest-package/)
+- [read-pkg](https://github.com/sindresorhus/read-pkg)
+- [normalize-package-data](https://github.com/npm/normalize-package-data)
+
 ## License
 
 MIT, see [LICENSE.md](http://github.com/mattdesl/read-closest-package/blob/master/LICENSE.md) for details.
