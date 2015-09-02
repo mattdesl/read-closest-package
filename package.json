@@ -15,10 +15,11 @@
     "read-json": "^0.1.0"
   },
   "devDependencies": {
+    "standard": "^5.1.1",
     "tape": "^4.0.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "standard && node test.js"
   },
   "keywords": [
     "simple",

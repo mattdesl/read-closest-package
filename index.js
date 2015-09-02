@@ -1,9 +1,9 @@
 var closest = require('closest-package')
 var read = require('load-json-file')
 
-var truthy = function() { return true }
+var truthy = function () { return true }
 
-module.exports = function(opt, cb) {
+module.exports = function (opt, cb) {
   if (typeof opt === 'function') {
     cb = opt
     opt = {}
@@ -14,10 +14,10 @@ module.exports = function(opt, cb) {
 
   var cwd = opt.cwd || process.cwd()
   var filter = opt.filter || truthy
-  closest(cwd, filter, function(err, file) {
+  closest(cwd, filter, function (err, file) {
     if (err || !file) {
-      return process.nextTick(function() {
-        cb(new Error('Could not find a root package.json from:\n'+cwd))
+      return process.nextTick(function () {
+        cb(new Error('Could not find a root package.json from:\n' + cwd))
       })
     }
     read(file).then(function (json) {
@@ -26,8 +26,8 @@ module.exports = function(opt, cb) {
   })
 }
 
-module.exports.sync = function(opt) {
-  opt = opt||{}
+module.exports.sync = function (opt) {
+  opt = opt || {}
   var cwd = opt.cwd || process.cwd()
   var filter = opt.filter || truthy
   var result = closest.sync(cwd, filter)
