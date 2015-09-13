@@ -3,10 +3,12 @@ var test = require('tape')
 var expected = require('./package.json')
 
 test('reads the closest package.json file', function (t) {
-  t.plan(1)
-  read(function (err, data) {
+  t.plan(3)
+  read(function (err, data, file) {
     if (err) t.fail(err)
     t.deepEqual(data, expected, 'matches this package.json')
+    t.equal(typeof file, 'string')
+    t.ok(/package\.json$/.test(file))
   })
 })
 

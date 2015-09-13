@@ -5,9 +5,10 @@
 Reads the closest package.json file and parses its JSON.
 
 ```js
-require('read-closest-package')(function(err, data) {
+require('read-closest-package')(function(err, data, filename) {
   console.log(data.version)
   console.log(data.description)
+  console.log(filename)
 })
 ```
 
@@ -27,7 +28,8 @@ if (pkg)
 
 #### `closest([opt], cb)`
 
-Looks for the closest package and calls the callback `cb` with `(err, data)`.
+Looks for the closest package and calls the callback `cb` with `(err, data,
+filename)`.
 
 - `cwd` the working directory to search up from for the package.json (defaults to `process.cwd()`)
 - `filter` a filter passed to [closest-package](https://github.com/hughsk/closest-package/)
